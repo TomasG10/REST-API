@@ -1,4 +1,6 @@
-GET http://localhost:4000/producers
+@api-Connection = http://localhost:4000/producers
+
+GET {{api-Connection}}
 
 ###
-POST http://localhost:4000/producers
+GET {{api-Connection}}/142
