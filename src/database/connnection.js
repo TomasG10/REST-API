@@ -2,7 +2,7 @@ import sql from 'mssql';
 
 export const dbSettings = {
     user: 'sa',
-    password: 'Sven1234',
+    password: 'Horizonte10',
     server: 'localhost',
     database: 'esencialverdesystem', 
     options: {

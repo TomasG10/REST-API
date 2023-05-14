@@ -7,7 +7,7 @@ const config = {
     type: 'default',
     options: {
       userName: 'sa',
-      password: 'Sven1234'}
+      password: 'Horizonte10'}
   },
   options: {
     database: 'esencialverdesystem',
