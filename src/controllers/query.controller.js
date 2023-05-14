@@ -1,5 +1,7 @@
-import { getConnection , sql} from '../database';
+import { getConnection , sql, getConnectionNoPool} from '../database';
 import { queries } from '../database/querys';
+const { Request } = require('tedious');
+const connection = require('./noPoolconnection');
 
 export const getProducers = async (req, res) => {
 
@@ -36,6 +38,18 @@ export const getStoredProcedure = async (req, res) => {
 
     try {
         const pool = await getConnection();
+        const result = await pool.request().query(queries.getStoredProcedure);
+        res.json(result.recordset);
+    }   catch (error) { 
+        res.status(500);
+        res.send(error.message);
+    }
+
+};
+
+export const getStoredProcedure_noPool = async (req, res) => {
+    try {
+        const pool = await getConnectionNoPool();
         const result = await pool.request().query(queries.getStoredProcedure);
         res.json(result.recordset);
     }   catch (error) { 
