@@ -1,6 +1,6 @@
 import sql from 'mssql';
 
-const dbSettings = {
+export const dbSettings = {
     user: 'sa',
     password: 'Sven1234',
     server: 'localhost',
@@ -21,3 +21,4 @@ export async function getConnection() {
 }
 
 export {sql};
+
