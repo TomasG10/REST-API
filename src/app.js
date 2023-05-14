@@ -13,4 +13,3 @@ app.use(queryRoutes);
 
 export default app;
 
-
