@@ -4,3 +4,9 @@ GET {{api-Connection}}
 
 ###
 GET {{api-Connection}}/142
+
+###
+GET {{api-Connection}}/pool
+
+###
+GET {{api-Connection}}/sinpool

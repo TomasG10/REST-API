@@ -11,6 +11,9 @@ export const dbSettings = {
     }
 }
 
+const pool = new sql.ConnectionPool(dbSettings);
+export default pool;
+
 export async function getConnection() {
     try {
         const pool = await sql.connect(dbSettings);

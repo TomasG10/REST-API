@@ -1,10 +1,12 @@
 
 import { Router } from "express";
 
-import { getStoredProcedure } from "../controllers/query.controller";
+import { getStoredProcedure, getStoredProcedureConPool } from "../controllers/query.controller";
+
 
 const router = Router();
 
-router.get('/producers', getStoredProcedure);
+router.get('/producers/sinpool', getStoredProcedure);
+router.get('/producers/pool', getStoredProcedureConPool);
 
 export default router;
